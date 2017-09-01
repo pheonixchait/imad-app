@@ -5,23 +5,49 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One : Chaitrali Londhe',
-    head: 'Article One' ,
-    date: 'Sept 1 2017',
+var articles = 
+{
+    articleOne: {
+        title: 'Article One : Chaitrali Londhe',
+        head: 'Article One' ,
+        date: 'Sept 1 2017',
+        content: `
+           <p>
+             Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.
+           </p>
+    
+           <p>
+             Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.       
+           </p>
+           
+           <p>
+             Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.
+           </p>
+        `
+    },
+    
+    articleTwo: {
+    title: 'Article Two : Chaitrali Londhe',
+    head: 'Article Two' ,
+    date: 'Sept 10 2017',
     content: `
        <p>
          Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.
        </p>
-
+       `
+    },
+    
+    articleThree: {
+    title: 'Article Three : Chaitrali Londhe',
+    head: 'Article Three' ,
+    date: 'Sept 15 2017',
+    content: `
        <p>
-         Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.       
+         Contents of article one.Contents of article one.Contents of article one. 
        </p>
-       
-       <p>
-         Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.Contents of article one.
-       </p>
-    `
+       `
+    }
+    
 };
 
 function createTemplate (data){
@@ -83,11 +109,11 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get('/article-two', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));     
+ res.send(createTemplate(articleTwo));    
 });
 
 app.get('/article-three', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));    
+ res.send(createTemplate(articlethree));    
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
