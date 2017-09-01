@@ -109,11 +109,11 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get('/article-two', function (req, res) {
- res.send(createTemplate(article-two));    
+ res.send(createTemplate(articles[article-two]));    
 });
 
 app.get('/article-three', function (req, res) {
- res.send(createTemplate(article-three));    
+ res.send(createTemplate(articles[article-three]));    
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
