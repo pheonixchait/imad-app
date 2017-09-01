@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles = 
 {
-    articleOne: {
+    'article-one': {
         title: 'Article One : Chaitrali Londhe',
         head: 'Article One' ,
         date: 'Sept 1 2017',
@@ -105,7 +105,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
- res.send(createTemplate(articleOne));    
+ res.send(createTemplate(article-one));    
 });
 
 app.get('/article-two', function (req, res) {
