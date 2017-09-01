@@ -26,7 +26,7 @@ var articles =
         `
     },
     
-    articleTwo: {
+    'article-two': {
     title: 'Article Two : Chaitrali Londhe',
     head: 'Article Two' ,
     date: 'Sept 10 2017',
@@ -37,7 +37,7 @@ var articles =
        `
     },
     
-    articleThree: {
+    'article-three': {
     title: 'Article Three : Chaitrali Londhe',
     head: 'Article Three' ,
     date: 'Sept 15 2017',
@@ -109,11 +109,11 @@ app.get('/article-one', function (req, res) {
 });
 
 app.get('/article-two', function (req, res) {
- res.send(createTemplate(articleTwo));    
+ res.send(createTemplate(article-two));    
 });
 
 app.get('/article-three', function (req, res) {
- res.send(createTemplate(articlethree));    
+ res.send(createTemplate(article-three));    
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
