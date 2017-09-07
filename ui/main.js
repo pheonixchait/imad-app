@@ -1,19 +1,30 @@
-console.log('Loaded!');
+//console.log('Loaded!');
 
 //changing content
-var element = document.getElementById('main-text');
-element.innerHTML='New Value';
+//var element = document.getElementById('main-text');
+//element.innerHTML='New Value';
 
 //moving image
-var img = document.getElementById('madi');
-var leftMargin = 0;
-function moveright()
-{
-   leftMargin = leftMargin + 1; 
-   img.style.marginLeft = leftMargin + 'px';
-}
+//var img = document.getElementById('madi');
+//var leftMargin = 0;
+//function moveright()
+//{
+   //leftMargin = leftMargin + 1; 
+   //img.style.marginLeft = leftMargin + 'px';
+//}
 
-img.onclick = function()
+//img.onclick = function()
+//{
+  // var interval = setInterval(moveright,50); 
+//};
+
+var button = document.getElementById("counter");
+var counter = 0;
+button.onclick = function()
 {
-   var interval = setInterval(moveright,50); 
+    //Render the variable to correct span
+    counter = counter + 1;
+    var span = document.getElementbyId("count");
+    span.innerHTML = counter.toString();
+    
 };
